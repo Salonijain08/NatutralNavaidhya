@@ -241,7 +241,6 @@ const OrderPolicySection = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   )
 }

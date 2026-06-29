@@ -114,7 +114,6 @@ const ReviewSectionGrid = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };

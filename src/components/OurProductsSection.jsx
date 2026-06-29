@@ -327,7 +327,7 @@ const OurProductsSection = () => {
       </div>
 
     </section>
-    <Footer />
+   
 </>
   )
 }

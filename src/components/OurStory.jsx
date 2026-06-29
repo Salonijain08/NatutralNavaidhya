@@ -199,7 +199,6 @@ export default function OurStory() {
       </div>
     </section>
 
-    <Footer />
       </>
   );
 }
