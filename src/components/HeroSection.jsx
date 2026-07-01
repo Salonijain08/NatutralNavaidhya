@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   IconLeaf,
   IconChefHat,
@@ -44,13 +44,21 @@ const fadeUp = {
   show: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.08, ease: "easeOut" },
+    transition: { duration: 2.0, delay: i * 0.08, ease: "easeOut" },
   }),
 };
 
 export default function HeroSection() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [direction, setDirection] = useState(1);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDirection(1);
+      setActiveIdx((prev) => (prev + 1) % productShowcase.length);
+    }, 2000);
+
+    return () => clearInterval(timer); // cleanup on unmount
+  }, []);
 
   const paginate = (newDirection) => {
     setDirection(newDirection);

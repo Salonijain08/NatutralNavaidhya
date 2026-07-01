@@ -1,29 +1,30 @@
 import { motion } from "motion/react";
-import { IconLeaf, IconHeart } from "@tabler/icons-react";
+import { IconHeart } from "@tabler/icons-react";
+import { Home, Sparkles, Package, Rocket, Leaf, Hand, Heart, Star } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const timeline = [
   {
-    emoji: "🏠",
+    icon: Home,
     year: "The Beginning",
     heading: "Started from home",
     desc: "Mamma began making snacks the way her mother taught her — by hand, with patience, and with only the finest ingredients. No shortcuts, no preservatives, just pure love on a plate.",
   },
   {
-    emoji: "✨",
+    icon: Sparkles,
     year: "The Spark",
     heading: "When neighbours became customers",
     desc: 'Word spread through the neighbourhood. "Yeh kaahan se laayi?" became a daily question. That\'s when we realised — these weren\'t just snacks, they were memories people wanted to keep.',
   },
   {
-    emoji: "📦",
+    icon: Package,
     year: "Taking Shape",
     heading: "NaivedyA is born",
     desc: "We gave the dream a name. NaivedyA — an offering made with devotion. Every batch is still handcrafted with the same recipe, the same care, the same hands.",
   },
   {
-    emoji: "🚀",
+    icon: Rocket,
     year: "Today & Beyond",
     heading: "Growing, but never forgetting our roots",
     desc: "Our family has big dreams — to bring authentic Indian snacks to every home, near and far. No matter how big we grow, the recipe stays the same: honest ingredients, time-honoured methods, and a whole lot of love.",
@@ -31,9 +32,9 @@ const timeline = [
 ];
 
 const values = [
-  { emoji: "🌿", title: "Pure Ingredients", desc: "No chemicals, no shortcuts. What goes in is what you taste." },
-  { emoji: "👐", title: "Handcrafted Always", desc: "Every piece shaped by hand, the way it's always been done." },
-  { emoji: "🏡", title: "Family First", desc: "A family business, made for your family's snack time." },
+  { icon: Leaf, title: "Pure Ingredients", desc: "No chemicals, no shortcuts. What goes in is what you taste." },
+  { icon: Hand, title: "Handcrafted Always", desc: "Every piece shaped by hand, the way it's always been done." },
+  { icon: Heart, title: "Family First", desc: "A family business, made for your family's snack time." },
 ];
 
 const fadeUp = {
@@ -109,7 +110,7 @@ export default function OurStory() {
           {/* Vertical line */}
           <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#3C6E47] to-[#EAF1E6] dark:to-neutral-900 rounded-full" />
 
-          {timeline.map(({ emoji, year, heading, desc }, idx) => (
+          {timeline.map(({ icon: Icon, year, heading, desc }, idx) => (
             <motion.div
               key={idx}
               initial="hidden"
@@ -120,8 +121,8 @@ export default function OurStory() {
               className="flex gap-6 mb-12 relative"
             >
               {/* Dot */}
-              <div className="flex-shrink-0 w-11 h-11 rounded-full bg-[#EAF1E6] border-[3px] border-[#3C6E47] flex items-center justify-center text-lg z-10 dark:bg-neutral-900">
-                {emoji}
+              <div className="flex-shrink-0 w-11 h-11 rounded-full bg-[#EAF1E6] border-[3px] border-[#3C6E47] flex items-center justify-center z-10 dark:bg-neutral-900">
+                <Icon size={18} className="text-[#3C6E47]" strokeWidth={2} />
               </div>
 
               {/* Content */}
@@ -166,12 +167,14 @@ export default function OurStory() {
           custom={0.5}
           className="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-14"
         >
-          {values.map(({ emoji, title, desc }, idx) => (
+          {values.map(({ icon: Icon, title, desc }, idx) => (
             <div
               key={idx}
               className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5"
             >
-              <span className="text-2xl mb-3 block">{emoji}</span>
+              <div className="w-9 h-9 rounded-full bg-[#EAF1E6] dark:bg-neutral-800 flex items-center justify-center mb-3">
+                <Icon size={16} className="text-[#3C6E47]" strokeWidth={2} />
+              </div>
               <p className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">{title}</p>
               <p className="text-xs text-neutral-500 dark:text-neutral-500 leading-relaxed">{desc}</p>
             </div>
@@ -187,7 +190,9 @@ export default function OurStory() {
           custom={0.5}
           className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-[#3C6E47] rounded-3xl p-8 text-white"
         >
-          <span className="text-5xl flex-shrink-0">🌟</span>
+          <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
+            <Star size={26} className="text-white" strokeWidth={2} />
+          </div>
           <div>
             <p className="text-xl font-bold mb-2">Our vision — to go far, together</p>
             <p className="text-sm text-white/80 leading-relaxed">

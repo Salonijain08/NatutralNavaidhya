@@ -37,20 +37,18 @@ const policyLinks = [
   { label: "Return policy", to: "#", icon: IconRefresh },
   { label: "Privacy policy", to: "#", icon: IconLock },
 ];
-
 const contactLinks = [
-  { label: "hello@naivedya.in", href: "mailto:hello@naivedya.in", icon: IconMail },
-  { label: "+91 9664351597", href: "tel:+911234567890", icon: IconPhone },
-  { label: "WhatsApp order", href: "#", icon: IconBrandWhatsapp },
+  { label: "navaidhyanatural@gmail.com", href: "mailto:navaidhyanatural@gmail.com", icon: IconMail },
+  { label: "+91 9664351597", href: "tel:+919664351597", icon: IconPhone },
+  { label: "WhatsApp order", href: "https://wa.me/919664351597", icon: IconBrandWhatsapp },
   { label: "Alwar,Rajasthan", href: "#", icon: IconMapPin },
 ];
-
-const socials = [
-  { icon: IconBrandInstagram, href: "#", label: "Instagram" },
-  { icon: IconBrandFacebook, href: "#", label: "Facebook" },
-  { icon: IconBrandWhatsapp, href: "#", label: "WhatsApp" },
-  { icon: IconBrandYoutube, href: "#", label: "YouTube" },
-];
+// const socials = [
+//   { icon: IconBrandInstagram, href: "#", label: "Instagram" },
+//   { icon: IconBrandFacebook, href: "#", label: "Facebook" },
+//   { icon: IconBrandWhatsapp, href: "#", label: "WhatsApp" },
+//   { icon: IconBrandYoutube, href: "#", label: "YouTube" },
+// ];
 
 const certItems = [
   { text: "FSSAI License", sub: "12345678901234" },
@@ -110,7 +108,7 @@ export default function Footer() {
               Handcrafted Indian snacks made with time-honoured recipes, the finest natural ingredients, and a pinch of love.
             </p>
 
-            <div className="mt-4 flex gap-2">
+            {/* <div className="mt-4 flex gap-2">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -121,9 +119,9 @@ export default function Footer() {
                   <Icon size={14} />
                 </a>
               ))}
-            </div>
+            </div> */}
 
-            <div className="mt-4 flex flex-wrap gap-1.5">
+            <div className="mt-4 flex flex-wrap gap-1.5 mt-10" >
               {[
                 { icon: IconLeaf, label: "100% Natural" },
                 { icon: IconShieldCheck, label: "No Preservatives" },
@@ -220,7 +218,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-4">
-          <p className="text-[11.5px] text-[#7AAE82]">© 2025 NaivedyA. All rights reserved.</p>
+          <p className="text-[11.5px] text-[#7AAE82]">© 2026 NaivedyA. All rights reserved.</p>
           <p className="flex items-center gap-1.5 text-[11.5px] text-[#7AAE82]">
             <IconHeart size={13} className="text-[#A8D4B0]" />
             Made with love in India

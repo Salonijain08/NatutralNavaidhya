@@ -5,11 +5,6 @@ import { IconBrandWhatsapp, IconLeaf } from '@tabler/icons-react'
 import emailjs from '@emailjs/browser'
 import Footer from '@/components/Footer'
 
-// ─── EmailJS config ───────────────────────────────────────────────
-// 1. Go to https://emailjs.com → sign up free
-// 2. Add a Gmail service → copy Service ID below
-// 3. Create an Email Template → copy Template ID below
-// 4. Get your Public Key from Account → API Keys
 const EMAILJS_SERVICE_ID = 'service_sqisels'
 const EMAILJS_TEMPLATE_ID = 'template_7olvkj8'
 const EMAILJS_PUBLIC_KEY = 'eAOIql-fqZ2Z-uVoh'
@@ -32,28 +27,21 @@ const contacts = [
     value: '+91 78772 31966',
     href: 'tel:+917877231966',
   },
-  {
-    icon: IconBrandWhatsapp,
-    iconBg: 'bg-[#E1F5EE]',
-    iconColor: 'text-[#25D366]',
-    label: 'WhatsApp',
-    value: '+91 96643 51597',
-    href: 'https://wa.me/919664351597',
-  },
+  
   {
     icon: Mail,
     iconBg: 'bg-[#EDE7F6]',
     iconColor: 'text-[#4527A0]',
     label: 'Email us',
-    value: 'jainsaloni1522@gmail.com',
-    href: 'mailto:jainsaloni1522@gmail.com',
+    value: 'navaidhyanatural@gmail.com',
+    href: 'mailto:navaidhyanatural@gmail.com',
   },
   {
     icon: MapPin,
     iconBg: 'bg-[#FEF3C7]',
     iconColor: 'text-[#92400E]',
     label: 'Location',
-    value: 'Bapu Nagar, Jaipur, Rajasthan',
+    value: '321606, Kherli Ganj, Alwar, Rajasthan, India',
     href: null,
   },
 ]
@@ -121,10 +109,23 @@ const ContactPage = () => {
             Reach out for orders, bulk enquiries, or just to say hello. We're happy to help.
           </p>
         </div>
-      
-<p className="text-green-900  font-semibold text-sm max-w-md">Contact No. 9664351597, 7877231966</p>
-         <p  className="text-white-900  font-semibold text-sm max-w-md"> 321606, Kherli ganj, Alwar  </p>
-             <p  className="text-white-900  font-semibold text-sm max-w-md">Rajasthan , India </p>
+
+        <div className="relative flex flex-col gap-2.5 max-w-md">
+          {contacts.map((c, i) => (
+            <a
+              key={i}
+              href={c.href || undefined}
+              target={c.href?.startsWith('http') ? '_blank' : undefined}
+              rel={c.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className={`flex items-center gap-2.5 text-sm ${
+                c.href ? 'text-neutral-700 hover:text-[#3C6E47] cursor-pointer' : 'text-neutral-700'
+              } transition-colors`}
+            >
+              <c.icon size={15} className="shrink-0 text-[#3C6E47]" />
+              <span className="font-medium">{c.value}</span>
+            </a>
+          ))}
+        </div>
         </div>
 
         {/* Right — form */}

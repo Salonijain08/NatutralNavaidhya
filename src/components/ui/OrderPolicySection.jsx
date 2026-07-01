@@ -85,9 +85,10 @@ const ContactModal = ({ onClose }) => (
         <div className="flex items-center gap-2">
           <div className="flex-1 h-px bg-[#F0EAE0]" />
           <div className="flex items-center gap-1.5 text-[11px] text-neutral-400">
-            <Clock3 size={12} />
-            Mon – Sat &nbsp;·&nbsp; 9 AM to 8 PM
-          </div>
+  <Clock3 size={12} />
+  Available 24×7 &nbsp;·&nbsp; Call anytime
+</div>
+
           <div className="flex-1 h-px bg-[#F0EAE0]" />
         </div>
       </div>

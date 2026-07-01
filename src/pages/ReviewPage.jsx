@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    location: "Delhi",
+    name: "Sanjay Sethi",
+    location: "Jaipur",
     avatar: "/mathri.png",
     rating: 5,
     date: "15 March 2025",
@@ -16,8 +16,8 @@ const testimonials = [
     product: "Classic Masala Mathri",
   },
   {
-    name: "Rahul Verma",
-    location: "Mumbai",
+    name: "Ankita Jain",
+    location: "Banglore",
     avatar: "/mathri.png",
     rating: 5,
     date: "02 April 2025",
@@ -26,8 +26,8 @@ const testimonials = [
     product: "Mix Namkeen & Chakli",
   },
   {
-    name: "Ananya Patel",
-    location: "Ahmedabad",
+    name: "Lokesh  Kumar Sharma",
+    location: "Alwar Raj.",
     avatar: "/mathri.png",
     rating: 5,
     date: "20 May 2025",
